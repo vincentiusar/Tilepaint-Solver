@@ -5,7 +5,7 @@ with the asymptotic time complexity runnning time $O(2^{p} \cdot mn)$, where $m 
 
 ## Test Cases
 There are 250 test cases in the TC folder taken from [https://www.janko.at/Raetsel/Tairupeinto/index.htm](https://www.janko.at/Raetsel/Tairupeinto/index.htm). Each test case is numbered from `1` to `250` where a file with extension \*.in is the input and \*\_sol.txt is the expected answer of such number cases.
-There are 3 kinds of instance sizes, i.e. `$10 \times 10$; $12 \times 12$; and $15 \times 15$`.
+There are 3 kinds of instance sizes, i.e. $10 \times 10$; $12 \times 12$; and $15 \times 15$.
 
 ## Verifier
 
