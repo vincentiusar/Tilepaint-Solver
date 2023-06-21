@@ -74,9 +74,9 @@ bool mainValidation(vlb CG, vl CC, vl CR, int n) {
     bool rule2 = IsAllSame(CG, n);
     bool rule3 = ComplyConstraint(CG, CC, CR);
 
-    cout << "rule 1 : " << rule1 << endl;
-    cout << "rule 2 : " << rule2 << endl;
-    cout << "rule 3 : " << rule3 << endl;
+    // cout << "rule 1 : " << rule1 << endl;
+    // cout << "rule 2 : " << rule2 << endl;
+    // cout << "rule 3 : " << rule3 << endl;
     return rule1 && rule2 && rule3;
 }
 
@@ -109,5 +109,8 @@ int main() {
         }
     }
 
-    cout << mainValidation(IG, CC, CR, t);
+    auto start = chrono::steady_clock::now();
+    cout << (mainValidation(IG, CC, CR, t) ? "Valid Solution" : "Invalid");
+    auto end = chrono::steady_clock::now();
+    cout << "\nExecution time: " << chrono::duration_cast<chrono::milliseconds>(end - start).count() << " ms" << endl;
 }

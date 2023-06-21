@@ -184,19 +184,19 @@ void backtrack(int now, vlb &CG, int n, vl CC, vl CR) {
     } else {
         for (int i = 1; i >= 0; i--) {
             color(CG, now, i);
-
-            if (i == 1) {
+            if (i == 0) {
+                backtrack(now+1, CG, n, CC, CR);
+            } else {
                 conf.push_back(now);
                 if ((!IsRemainRowUncolored(CG, CR, n, now) || !IsRemainColUncolored(CG, CC, n, now)) || !IsValidConf(CG, CC, CR)) {
                     color(CG, now, 0);
                     conf.pop_back(); 
                     continue;
                 }
+                backtrack(now+1, CG, n, CC, CR);
+                conf.pop_back();
+                color(CG, now, 0);
             }
-
-            backtrack(now+1, CG, n, CC, CR);
-            if (i == 1) conf.pop_back();
-            color(CG, now, 0);
         }
     }
 }

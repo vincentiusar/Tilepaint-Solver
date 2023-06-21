@@ -1,5 +1,12 @@
-/TA tmp
+/TAtmp
 /ans
 /.vscode
 /__pycache__
 /a.exe
+/minisat
+solution.exe
+gen_tc_bf.bat
+gen_tc_pysat.bat
+gen_tc_minisat.bat
+1.in
+tcgen.py
