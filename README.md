@@ -1,18 +1,18 @@
 # Tilepaint Puzzle Solver
 
-Tilepaint (Tairupeinto) is a logic pencil-and-paper puzzle that proven NP-Complete. The verification and solver related to the Tilepaint puzzles are in this repository. We implemented the solver using Exhausted Search (Brute force) and Prune-and-Search (Backtracking)
-with the asymptotic time complexity runnning time $O(2^{p} \cdot mn)$, where $m \times n$ is the size of the instance. For more information about the puzzle, see https://www.nikoli.co.jp/en/puzzles/tilepaint/.
+Tilepaint (Tairupeinto) is a logic pencil-and-paper puzzle that has proven NP-Complete. The verification and solver related to the Tilepaint puzzles are in this repository. We implemented the solver using Exhausted Search (Brute force) and Prune-and-Search (Backtracking)
+with the asymptotic time complexity runnning time $O(2^{p} \cdot mn)$, where $m \times n$ is the size of the instance. For more information about the puzzle, see [https://www.nikoli.co.jp/en/puzzles/tilepaint/](https://www.nikoli.co.jp/en/puzzles/tilepaint/).
 
 ## Test Cases
-There are 250 test cases in TC folder taken from https://www.janko.at/Raetsel/Tairupeinto/index.htm. Each test case numbered from 1 to 250 where file with extension \*.in is the input and \*\_sol.txt is the expected answer of such number cases.
-There are 3 kinds of instance sizes, i.e. $10 \times 10$; $12 \times 12$; and $15 \times 15$.
+There are 250 test cases in the TC folder taken from [https://www.janko.at/Raetsel/Tairupeinto/index.htm](https://www.janko.at/Raetsel/Tairupeinto/index.htm). Each test case is numbered from `1` to `250` where a file with extension \*.in is the input and \*\_sol.txt is the expected answer of such number cases.
+There are 3 kinds of instance sizes, i.e. `$10 \times 10$; $12 \times 12$; and $15 \times 15$`.
 
 ## Verifier
 
-The verifier code is written in C++ and can be found in the tilepaint_validation.cpp. 
+The verifier code is written in C++ and can be found in the `tilepaint_validation.cpp`. 
 
 ### Input
-The input format for the verifier as follows
+The input format for the verifier is as follows
 ```
 m n
 cc_1 cc_2 ... cc_n
@@ -76,9 +76,9 @@ Execution time: 1 ms
 ```
 
 ## Solver
-The verifier code is written in C++ and can be found in the tilepaint_BF.cpp (exhausted search) and tilepaint_BT.cpp (prune-and-search).
-Both of them receiving the same input format.
-However, the exhausted search output is a set of number of colored tile, and the prune-and-search output is a set of number of colored tile with also the configuration denoted by an $m \times n$ of 1 or 0.
+The verifier code is written in C++ and can be found in the `tilepaint_BF.cpp` (exhausted search) and `tilepaint_BT.cpp` (prune-and-search).
+Both of them receive the same input format.
+However, the exhausted search output is a set of a number of colored tiles, and the prune-and-search output is a set of a number of colored tiles with also the configuration denoted by an $m \times n$ of `1` or `0`.
 
 ### Input
 ```
@@ -153,4 +153,4 @@ Execution Time: 1ms.
 ```
 
 ## Experiment Results
-The experiment result of running time all test cases are in file ###.xlsx
+The experiment result of running time for all test cases are in file `.xlsx`
