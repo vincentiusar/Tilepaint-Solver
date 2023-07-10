@@ -1,7 +1,6 @@
 # Tilepaint Puzzle Solver
 
-Tilepaint (Tairupeinto) is a logic pencil-and-paper puzzle that has proven NP-Complete. The verification and solver related to the Tilepaint puzzles are in this repository. We implemented the solver using Exhausted Search (Brute force) and Prune-and-Search (Backtracking)
-with the asymptotic time complexity runnning time $O(2^{p} \cdot mn)$, where $m \times n$ is the size of the instance. For more information about the puzzle, see [https://www.nikoli.co.jp/en/puzzles/tilepaint/](https://www.nikoli.co.jp/en/puzzles/tilepaint/).
+Tilepaint (Tairupeinto) is a logic pencil-and-paper puzzle that has proven NP-Complete. The verification and solver related to the Tilepaint puzzles are in this repository. We implemented the solver using complete search with bitmasking technique and prune-and-search with the backtracking technique whose asymptotic running times are respectively $O(2^{p} \cdot p \cdot mn)$ and $O(2^{p} \cdot mn)$, where $m \times n$ is the size of the instance. For more information about the puzzle, see [https://www.nikoli.co.jp/en/puzzles/tilepaint/](https://www.nikoli.co.jp/en/puzzles/tilepaint/).
 
 ## Test Cases
 There are 250 test cases in the TC folder taken from [https://www.janko.at/Raetsel/Tairupeinto/index.htm](https://www.janko.at/Raetsel/Tairupeinto/index.htm). Each test case is numbered from `1` to `250` where a file with extension \*.in is the input and \*\_sol.txt is the expected answer of such number cases.
